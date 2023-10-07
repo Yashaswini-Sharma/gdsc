@@ -27,7 +27,7 @@ const Home = (props) => {
 				setUserName(user.displayName);
 			} else setUserName("");
 		});
-	});
+	},[]);
 
 	/*const upvote = async () => {
 		await addDoc(postsCollectionRef, {
