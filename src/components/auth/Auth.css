@@ -1,0 +1,18 @@
+.bx{
+    border-radius: 10px;
+    margin-left:20%;
+    margin-top:10%;
+    border: 1px solid blue;
+    width: 60vw;
+    height: 60vh;
+    background-color:#80CCCC;
+    
+}
+
+
+.bgclr{
+    padding-top:50px;
+    width:100vw;
+    height:100vh;
+    background-color: #CCFFFF;
+}

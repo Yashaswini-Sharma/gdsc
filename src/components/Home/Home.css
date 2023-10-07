@@ -1,0 +1,15 @@
+.homepage-bgimage {
+    height: 100vh;
+    width:100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+.bx{
+  margin-top: 0%;
+    border-width: 1px;
+background-color: aliceblue;
+  padding-bottom: 0%;
+    height:100px;
+    margin-bottom: 10%;
+}

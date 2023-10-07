@@ -1,0 +1,54 @@
+.box{
+    background-color: transparent;
+    width:100vw;
+    height:5vh;
+    color:white;
+    flex-direction: 'row';
+    padding-top:10px;   
+    padding-left: 5px;
+
+}
+.links{
+    margin-top:10%;
+    margin: 1%;
+    text-decoration: none;
+    color:aliceblue;
+
+}
+.btn{
+    background-color: red;
+    border:None;
+    padding-bottom:2px;
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-top:2px;
+    
+}
+.Home{
+    text-align: left;
+    color: aliceblue;
+    display: inline;
+    font-size: 17px;
+    text-decoration: None;
+    margin-right:70%;
+   
+
+}
+
+.Signin{
+    display:inline;
+    padding-top: 1%;
+    background-color: aliceblue;
+    text-transform: capitalize; 
+    color:black;
+    padding-top:0px;
+    margin-top:3px;
+    border-radius: 100px;
+
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 0.1%;
+}
+.Loggedin{
+    color:aliceblue;
+}
