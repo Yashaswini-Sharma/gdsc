@@ -98,21 +98,17 @@ function Signup() {
 							<Link to="/login">Login</Link>
 						</span>
 					</p>
-					{value ? (
-						<button onClick={handleClick}>
-							<img
-								src={google}
-								style={{
-									width: "15px",
-									paddingRight: "5px",
-									paddingTop: "3px",
-								}}
-							/>
-							Sign In with Google
-						</button>
-					) : (
-						<Link to="/">Home</Link>
-					)}
+					<button onClick={handleClick}>
+						<img
+							src={google}
+							style={{
+								width: "15px",
+								paddingRight: "5px",
+								paddingTop: "3px",
+							}}
+						/>
+						Sign In with Google
+					</button>
 				</div>
 			</div>
 		</div>
