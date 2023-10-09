@@ -7,7 +7,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { auth } from './firebase';
 import CreatePosts from './components/Posts/CreatePosts';
-
+import Comment from './components/Posts/Comment'
+import Showcomment from './components/Posts/showcomment';
 
 
 function App() {
@@ -28,7 +29,9 @@ function App() {
           <Route path="/login" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/" element={<Home name={userName} />} />
-          <Route path="/createPosts" element={<CreatePosts/>} />
+          <Route path="/createPosts" element={<CreatePosts />} />
+          <Route path="/comment" element={<Comment />} />
+          <Route path="/showcomments" element={<Showcomment/>}/>
 
 
         </Routes>

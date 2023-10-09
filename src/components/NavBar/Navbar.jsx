@@ -1,9 +1,28 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { onAuthStateChanged, signOut } from "firebase/auth";
 
+import { Link } from "react-router-dom";
+import { auth, provider } from "../../firebase";
 import "./Navbar.css";
 
 const Navbar = (props) => {
+	const [authUser, setAuthUser] = useState(null);
+	useEffect(() => {
+		const listen = onAuthStateChanged(auth, (user) => {
+			if (user) {
+				setAuthUser(user);
+			} else setAuthUser(null);
+		});
+	}, []);
+	const userSignOut = () => {
+		signOut(auth)
+			.then(() => {
+				console.log("log out successful");
+			})
+			.catch((error) => console.log(error));
+	};
+
 	return (
 		<div className="Navbar">
 			<div className="box">
@@ -19,19 +38,35 @@ const Navbar = (props) => {
 					</Link>
 				</div>
 				{""}
+
 				<div className="Signin">
 					{props.name ? (
 						`${props.name}`
 					) : (
-						<button className="btn">
+						<div className="btn">
 							<Link
 								to="/login"
-								style={{ textDecoration: "None", color: "white" }}>
+								style={{
+									textDecoration: "None",
+									color: "black",
+
+									float: "right",
+								}}>
 								Sign In
 							</Link>
-						</button>
+						</div>
 					)}
 				</div>
+
+				{props.name ? (
+					<button className="rlinks" onClick={userSignOut}>
+						Sign out
+					</button>
+				) : (
+					<Link to="signup" className="rlinks">
+						Create Account
+					</Link>
+				)}
 			</div>
 		</div>
 	);

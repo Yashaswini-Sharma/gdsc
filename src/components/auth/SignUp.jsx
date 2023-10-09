@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import Navbar from "../NavBar/Navbar";
+
 import {
 	createUserWithEmailAndPassword,
 	updateProfile,
@@ -8,6 +10,7 @@ import {
 
 import InputControl from "../InputControl/InputControl";
 import { auth, provider } from "../../firebase";
+import google from "./google.png";
 
 function Signup() {
 	const navigate = useNavigate();
@@ -53,8 +56,9 @@ function Signup() {
 	};
 
 	return (
-		<div>
-			<div>
+		<div className="bgclr">
+			<Navbar />
+			<div className="bx">
 				<h1>Signup</h1>
 
 				<InputControl
@@ -81,7 +85,11 @@ function Signup() {
 
 				<div>
 					<b>{errorMsg}</b>
-					<button onClick={handleSubmission} disabled={submitButtonDisabled}>
+					<button
+						style={{ marginTop: "4%" }}
+						className="login"
+						onClick={handleSubmission}
+						disabled={submitButtonDisabled}>
 						Signup
 					</button>
 					<p>
@@ -91,7 +99,17 @@ function Signup() {
 						</span>
 					</p>
 					{value ? (
-						<button onClick={handleClick}>Sign In with Google</button>
+						<button onClick={handleClick}>
+							<img
+								src={google}
+								style={{
+									width: "15px",
+									paddingRight: "5px",
+									paddingTop: "3px",
+								}}
+							/>
+							Sign In with Google
+						</button>
 					) : (
 						<Link to="/">Home</Link>
 					)}

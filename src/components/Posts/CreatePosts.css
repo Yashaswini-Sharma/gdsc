@@ -1,0 +1,16 @@
+.l{
+    position:fixed;
+}
+
+.TextA{
+    width:70vw;
+    position:fixed;
+    height:3.4vh;
+    margin-left: 1%;
+}
+.inp{
+    height: 3vh;
+}
+.create{
+    position:fixed;
+}

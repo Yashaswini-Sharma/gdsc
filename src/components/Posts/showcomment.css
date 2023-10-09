@@ -1,0 +1,6 @@
+.bg {
+    background-image: linear-gradient(black, #501c58, black);
+    overflow: hidden;
+    position: relative;
+  }
+  
