@@ -60,17 +60,14 @@ const SignIn = () => {
 					</button>
 				</form>
 				<p>OR</p>
-				{value ? (
-					<button onClick={handleClick} style={{ marginTop: "0.1%" }}>
-						<img
-							src={google}
-							style={{ width: "15px", paddingRight: "5px", paddingTop: "3px" }}
-						/>
-						Sign In with Google
-					</button>
-				) : (
-					<Link to="/">Home</Link>
-				)}
+
+				<button onClick={handleClick} style={{ marginTop: "0.1%" }}>
+					<img
+						src={google}
+						style={{ width: "15px", paddingRight: "5px", paddingTop: "3px" }}
+					/>
+					Sign In with Google
+				</button>
 			</div>
 		</div>
 	);
