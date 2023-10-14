@@ -27,6 +27,7 @@ function Signup() {
 			setValue(data.user.email);
 			localStorage.setItem("email", data.user.email);
 		});
+		navigate("/");
 	};
 	useEffect(() => {
 		setValue(localStorage.getItem("email"));
